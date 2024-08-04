@@ -68,8 +68,8 @@ const Formulaire = () => {
     cycle: '',
     master: '',
   });
-  setFormErrors({});
-    navigate('/form2'); // Redirige vers le deuxième formulaire
+ // setFormErrors({});
+   // navigate('/form2'); // Redirige vers le deuxième formulaire
   
   const [formErrors, setFormErrors] = useState({});
 
@@ -104,7 +104,10 @@ const Formulaire = () => {
       }
     }
   };
-
+  
+  const handleNavigate = () => {
+    navigate('/form2');
+  }
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -438,7 +441,9 @@ const Formulaire = () => {
         </div>
 
         <center><button type="submit" className="btn btn-primary"><center>Envoyer</center></button></center>
-        <button type="button" className="btn btn-secondary ml-2" onClick={handleReset}>Remise</button>
+        <button type="button" className="btn btn-secondary ml-2" onClick={handleNavigate}>
+          
+          Remise</button>
       </form>
     </div>
   );
